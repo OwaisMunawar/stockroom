@@ -32,6 +32,8 @@ function ConflictReview({
       <TextInput
         testID="conflict-note"
         accessibilityLabel="Conflict review note"
+        autoCorrect={false}
+        autoComplete="off"
         placeholder="What did you verify?"
         style={styles.input}
         value={note}

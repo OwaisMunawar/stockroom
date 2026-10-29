@@ -107,6 +107,8 @@ export function InventoryApp({ controller }: { controller: InventoryController }
         key={tab}
         testID="page-scroll"
         keyboardShouldPersistTaps="handled"
+        keyboardDismissMode="on-drag"
+        automaticallyAdjustKeyboardInsets
         contentContainerStyle={{ flexGrow: 1 }}
       >
         {tab === 'inventory' ? (
