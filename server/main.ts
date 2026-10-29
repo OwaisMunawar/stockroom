@@ -14,8 +14,9 @@ async function main(): Promise<void> {
   const port = Number(process.env.PORT ?? 8057);
   if (!Number.isInteger(port) || port < 1 || port > 65535) throw new Error('Invalid PORT');
   const server = createCountServer(authority);
-  server.listen(port, '127.0.0.1', () =>
-    process.stdout.write(`Stockroom reference server listening on 127.0.0.1:${port}\n`),
+  const host = process.env.STOCKROOM_BIND ?? '127.0.0.1';
+  server.listen(port, host, () =>
+    process.stdout.write(`Stockroom reference server listening on ${host}:${port}\n`),
   );
   const shutdown = (): void => {
     server.close(() => {

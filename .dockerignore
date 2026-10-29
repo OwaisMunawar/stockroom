@@ -1,0 +1,8 @@
+node_modules
+ios
+android
+coverage
+.git
+server/data
+verification/build
+.env
