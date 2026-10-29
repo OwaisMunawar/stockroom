@@ -7,14 +7,16 @@
     "userInterfaceStyle": "light",
     "ios": {
       "bundleIdentifier": "com.owaismunawar.stockroom",
-      "supportsTablet": true
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSAppTransportSecurity": {
+          "NSAllowsLocalNetworking": true
+        }
+      }
     },
     "android": {
       "package": "com.owaismunawar.stockroom"
     },
-    "plugins": ["expo-sqlite"],
-    "autolinking": {
-      "nativeModulesDir": "./modules"
-    }
+    "plugins": ["expo-sqlite"]
   }
 }

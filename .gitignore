@@ -1,7 +1,7 @@
 node_modules/
 .expo/
-ios/
-android/
+/ios/
+/android/
 coverage/
 dist/
 server/data/
@@ -10,3 +10,7 @@ server/data/
 .env
 .env.*
 !.env.example
+verification/build/
+verification/*.xcodeproj/
+__pycache__/
+*.pyc
