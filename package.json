@@ -10,7 +10,7 @@
     "node": ">=22.13"
   },
   "scripts": {
-    "start": "expo start",
+    "start": "expo start --localhost",
     "ios": "expo run:ios",
     "android": "expo run:android",
     "server": "tsx server/main.ts",
@@ -21,7 +21,7 @@
     "test": "jest --runInBand",
     "test:coverage": "jest --runInBand --coverage",
     "doctor": "expo-doctor",
-    "verify:server": "tsx tool/verify-server.ts"
+    "start:demo": "EXPO_PUBLIC_DEMO=1 expo start --localhost"
   },
   "dependencies": {
     "expo": "~57.0.31",

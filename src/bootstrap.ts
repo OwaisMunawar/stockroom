@@ -14,7 +14,8 @@ import {
 } from './features/counts/data/draftParser';
 
 export async function openInventory(): Promise<InventoryController> {
-  const origin = process.env.EXPO_PUBLIC_SYNC_ORIGIN;
+  const deterministic = process.env.EXPO_PUBLIC_DEMO === '1';
+  const origin = deterministic ? undefined : process.env.EXPO_PUBLIC_SYNC_ORIGIN;
   const mode = origin ? 'http' : 'demo';
   const database = await openDatabaseAsync(
     mode === 'demo' ? 'stockroom-demo.db' : 'stockroom-client.db',
@@ -26,7 +27,9 @@ export async function openInventory(): Promise<InventoryController> {
   await repository.initialize(sampleCatalog);
   const demo = new WarehouseAuthority(driver, 'demo', clock);
   if (mode === 'demo') await demo.initialize(sampleCatalog);
-  const module = requireOptionalNativeModule<NativeCountModule>('StockroomIntelligence');
+  const module = deterministic
+    ? null
+    : requireOptionalNativeModule<NativeCountModule>('StockroomIntelligence');
   const controller = new InventoryController({
     repository,
     transport: origin ? new HttpTransport(origin) : demo,

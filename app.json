@@ -17,6 +17,7 @@
     "android": {
       "package": "com.owaismunawar.stockroom"
     },
-    "plugins": ["expo-sqlite"]
+    "plugins": ["expo-sqlite"],
+    "icon": "./assets/icon.png"
   }
 }

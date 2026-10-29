@@ -71,6 +71,8 @@ export function CountScreen({
           <TextInput
             testID="count-note"
             accessibilityLabel="Count note"
+            autoCorrect={false}
+            autoComplete="off"
             value={note}
             onChangeText={setNote}
             multiline
@@ -82,7 +84,7 @@ export function CountScreen({
               <Text style={styles.muted}>
                 {controller.modelAvailable
                   ? 'Available on this device'
-                  : 'Unavailable · rules parser is available'}
+                  : 'Not active · rules parser is available'}
               </Text>
             </View>
             <Switch
