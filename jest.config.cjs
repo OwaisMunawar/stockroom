@@ -16,6 +16,8 @@ module.exports = {
     'shared/**/*.ts',
     'src/features/**/application/**/*.ts',
     'src/features/**/data/clientRepository.ts',
+    'src/features/**/data/draftParser.ts',
+    'src/features/**/data/httpTransport.ts',
     'server/repository.ts',
     'server/http.ts',
   ],
