@@ -1,0 +1,27 @@
+name: StockroomVerification
+options:
+  deploymentTarget:
+    iOS: '18.0'
+settings:
+  base:
+    CODE_SIGNING_ALLOWED: NO
+    SWIFT_VERSION: '6.0'
+    SWIFT_STRICT_CONCURRENCY: complete
+    GENERATE_INFOPLIST_FILE: YES
+targets:
+  StockroomUITests:
+    type: bundle.ui-testing
+    platform: iOS
+    sources:
+      - StockroomUITests.swift
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.owaismunawar.stockroom.verification
+schemes:
+  StockroomVerification:
+    build:
+      targets:
+        StockroomUITests: [test]
+    test:
+      targets:
+        - StockroomUITests

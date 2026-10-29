@@ -1,0 +1,19 @@
+appId: com.owaismunawar.stockroom
+---
+- launchApp:
+    clearState: true
+- tapOn:
+    id: tab-count
+- tapOn:
+    id: parse-count
+- scrollUntilVisible:
+    element:
+      id: queue-count
+- tapOn:
+    id: queue-count
+- assertVisible: QUEUED ON THIS DEVICE
+- tapOn:
+    id: online-switch
+- tapOn:
+    id: sync-now
+- assertVisible: Nothing waiting
