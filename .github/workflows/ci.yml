@@ -79,7 +79,7 @@ jobs:
         with:
           distribution: temurin
           java-version: '17'
-      - uses: gradle/actions/setup-gradle@v6.4.0
+      - uses: gradle/actions/setup-gradle@v6.4.1
       - run: npm ci
       - run: npx expo prebuild --platform android --no-install
       - working-directory: android
