@@ -24,8 +24,8 @@
     "start:demo": "EXPO_PUBLIC_DEMO=1 expo start --localhost"
   },
   "dependencies": {
-    "expo": "~57.0.31",
-    "expo-constants": "~57.0.22",
+    "expo": "~57.0.32",
+    "expo-constants": "~57.0.23",
     "expo-crypto": "~57.0.4",
     "expo-sqlite": "~57.0.4",
     "expo-status-bar": "~57.0.1",
