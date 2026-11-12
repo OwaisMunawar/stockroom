@@ -75,11 +75,11 @@ jobs:
         with:
           node-version: '22'
           cache: npm
-      - uses: actions/setup-java@v6.1.0
+      - uses: actions/setup-java@v6.2.0
         with:
           distribution: temurin
           java-version: '17'
-      - uses: gradle/actions/setup-gradle@v6.4.0
+      - uses: gradle/actions/setup-gradle@v6.4.1
       - run: npm ci
       - run: npx expo prebuild --platform android --no-install
       - working-directory: android
